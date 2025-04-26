@@ -12,7 +12,7 @@ p{
 
 /* Body setup */
 body {
-    background: url('/Graphics/tumblr_inline_n258ovpRe81qhwjx8540.gif') repeat;
+    background: url('./Graphics/tumblr_inline_n258ovpRe81qhwjx8540.gif') repeat;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
