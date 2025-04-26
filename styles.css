@@ -1,0 +1,136 @@
+/* Basic reset */
+body, h1, h2, p, a, div, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-size: 0.75em;
+    color: #fff;
+}
+
+/* Body setup */
+body {
+    background: url('/Graphics/tumblr_inline_n258ovpRe81qhwjx8540.gif') repeat;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: #fff;
+    margin: 10px auto;
+    width: 100%;
+}
+.social_window{
+    padding: 5px;
+    margin: 5%;
+    border: 2px solid #fff;
+    background-color: #000000cd;
+}
+
+.social_window_header{
+    white-space: nowrap;
+    display: inline-block;
+    text-align: left;
+    padding-left: 3px;
+    width: 100%;
+    background-color: #6d0303;
+}
+.social_window_header *{
+
+    display: inline-block;
+
+}
+
+.social_window_header h1{
+    font-size: 1em;
+    color: #fff;
+    margin: 0;
+}
+
+.gif_1{
+    align-self: center;
+    padding-top: 0;
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.close_button{
+    float: right;
+    color : #fff;
+    background-color: #000000;
+    border: 0.5px solid #fff;
+    border-top: 2.5px solid #fff;
+    margin: 5px;
+
+}
+
+.profile {
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 80px auto; /* first column for profile pic + name, second column for text */
+    gap: 10px;
+    align-items: start;
+}
+
+/* Left side: profile picture + name */
+.profile_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Profile picture styling */
+.profile_pic {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 100%;
+    margin: 0 auto;
+    border: 2px solid #fff;
+}
+
+/* Name styling */
+.name {
+    font-size: 0.8em;
+    color: #fff;
+}
+
+/* Right side: text description */
+.profile_right {
+    text-align: left;
+}
+
+.link_title h1{
+    font-size: 1em;
+    color: #fff;
+    margin: 0;
+}
+
+.gif_2{
+    width: 2em;
+    height: 2.3em;
+    margin-left: 5px;
+}
+
+.link_grid{
+    margin-top: 10px;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+
+}
+
+.interest_img{
+    height: 50px;
+    width: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
