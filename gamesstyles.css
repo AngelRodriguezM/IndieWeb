@@ -70,6 +70,9 @@ hr{
 }
 
 .close_button{
+    padding: 2px 5px ; 
+
+    text-decoration: none;
     position: relative;
     top: 5px;
     float: right;
@@ -80,3 +83,41 @@ hr{
     margin: 5px;
 
 }
+.toggle_button{
+    padding: 2px 5px ; 
+
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    float: right;
+    color : #fff;
+    background-color: #000000;
+    border: 0.5px solid #fff;
+    border-top: 2.5px solid #fff;
+    margin: 5px;
+
+}
+
+/* Hide the checkbox visually */
+.checkbox {
+    display: none;
+}
+
+/* Style the menu content */
+.social_window_content {
+    visibility: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+
+.checkbox:checked ~ .social_window_content {
+    visibility: visible;
+    max-height: 1000px; /* Adjust this value as needed */
+    transition: max-height 0.5s ease-in;
+    
+}
+
+
+
