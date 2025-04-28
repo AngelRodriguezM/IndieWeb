@@ -33,6 +33,7 @@ hr{
     margin: 10px auto;
     width: 100%;
 }
+/* social 1 */
 .social_window{
     padding: 5px;
     margin: 5%;
@@ -46,7 +47,7 @@ hr{
     text-align: left;
     padding-left: 3px;
     width: 100%;
-    background-color: #6d0303;
+    background-color: #1c6d03;
 }
 .social_window_header *{
 
@@ -113,6 +114,94 @@ hr{
 
 
 .checkbox:checked ~ .social_window_content {
+    visibility: visible;
+    max-height: 1000px; /* Adjust this value as needed */
+    transition: max-height 0.5s ease-in;
+    
+}
+
+/*social 2 */
+
+.social_window_2{
+    padding: 5px;
+    margin: 5%;
+    border: 2px solid #fff;
+    background-color: #000000cd;
+}
+
+.social_window_header_2{
+    white-space: nowrap;
+    display: inline-block;
+    text-align: left;
+    padding-left: 3px;
+    width: 100%;
+    background-color: #6d0303;
+}
+.social_window_header_2 *{
+
+    display: inline-block;
+
+}
+
+.social_window_header_2 h1{
+    font-size: 1.25em;
+    color: #fff;
+    margin: 0;
+}
+
+.gif_2{
+    align-self: center;
+    position: relative;
+    top: 0px;
+    padding-top: 0;
+    width: 2em;
+    height: 2em;
+}
+
+.close_button{
+    padding: 2px 5px ; 
+
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    float: right;
+    color : #fff;
+    background-color: #000000;
+    border: 0.5px solid #fff;
+    border-top: 2.5px solid #fff;
+    margin: 5px;
+
+}
+.toggle_button_2{
+    padding: 2px 5px ; 
+
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    float: right;
+    color : #fff;
+    background-color: #000000;
+    border: 0.5px solid #fff;
+    border-top: 2.5px solid #fff;
+    margin: 5px;
+
+}
+
+/* Hide the checkbox visually */
+.checkbox2 {
+    display: none;
+}
+
+/* Style the menu content */
+.social_window_content_2 {
+    visibility: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+
+.checkbox2:checked ~ .social_window_content_2 {
     visibility: visible;
     max-height: 1000px; /* Adjust this value as needed */
     transition: max-height 0.5s ease-in;
