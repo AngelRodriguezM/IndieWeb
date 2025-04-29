@@ -28,8 +28,17 @@
         </div>
         
         <div class="social_window_content">
-            <img src="./Graphics/404/aguibihen-sigma-wolf.gif" alt="">
-            <p>hola</p>
+            <div id="content1" class="content">
+                <script>
+                    fetch('./articles/foreverworld.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('content1').innerHTML = html;
+                        })
+                            
+                </script>
+
+            </div>
         </div>
     </div>
       
@@ -74,12 +83,12 @@
         </div>
         
         <div class="social_window_content_3">
-            <div id="content" class="content">
+            <div id="content3" class="content">
                 <script>
                     fetch('./articles/articletest.html')
                         .then(response => response.text())
                         .then(html => {
-                            document.getElementById('content').innerHTML = html;
+                            document.getElementById('content3').innerHTML = html;
                         })
                             
                 </script>
@@ -87,5 +96,6 @@
             </div>
         </div>
     </div>
+    <img class="weirdass" src="./Graphics/games/picmix.com_2507784.gif" alt="">
 </body>
 </html>

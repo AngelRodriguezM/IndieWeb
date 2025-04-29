@@ -44,11 +44,25 @@ hr{
     width: 77px;
 }
 /* social 1 */
+.social_window_content img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    margin: 0px auto;
+
+}
 .social_window{
     padding: 5px;
     margin: 5%;
     border: 2px solid #fff;
     background-color: #000000cd;
+}
+
+.weirdass{
+    margin: 5%;
+    height: 200px;
+    width: 100px;
 }
 
 .social_window_header{
@@ -125,12 +139,20 @@ hr{
 
 .checkbox:checked ~ .social_window_content {
     visibility: visible;
-    max-height: 1000px; /* Adjust this value as needed */
+    max-height: 10000px; /* Adjust this value as needed */
     transition: max-height 0.5s ease-in;
     
 }
 
 /*social 2 */
+.social_window_content_2 img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    margin: 0px auto;
+
+}
 
 .social_window_2{
     padding: 5px;
@@ -213,7 +235,7 @@ hr{
 
 .checkbox2:checked ~ .social_window_content_2 {
     visibility: visible;
-    max-height: 1000px; /* Adjust this value as needed */
+    max-height: 10000px; /* Adjust this value as needed */
     transition: max-height 0.5s ease-in;
     
 }
@@ -225,7 +247,8 @@ hr{
     max-height: 400px;
     object-fit: contain;
     display: block;
-    margin: 10px auto;
+    margin: 0px auto;
+
 }
 
 .social_window_3{
