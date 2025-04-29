@@ -1,21 +1,21 @@
 /* Basic reset */
-body, h1, h2, p, a, div, footer {
+body, h1, h2, a, div, footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #000000;
-}
-
 p{
-    font-size: 1.25em;
+    text-align: left;
+    font-size: 1.20em;
     color: #fff;
+    box-sizing: border-box;
+    padding: 1%;
 }
 
 /* Body setup */
 body {
+    background-color: #000000;
     background: url('Graphics/15895-v4.jpg') repeat;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
@@ -214,6 +214,102 @@ hr{
 .checkbox2:checked ~ .social_window_content_2 {
     visibility: visible;
     max-height: 1000px; /* Adjust this value as needed */
+    transition: max-height 0.5s ease-in;
+    
+}
+
+/*social 3 */
+
+.social_window_content_3 img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
+}
+
+.social_window_3{
+    padding: 5px;
+    margin: 5%;
+    border: 2px solid #fff;
+    background-color: #000000cd;
+}
+
+.social_window_header_3{
+    white-space: nowrap;
+    display: inline-block;
+    text-align: left;
+    padding-left: 3px;
+    width: 100%;
+    background-color: #FDF800;
+}
+.social_window_header_3 *{
+
+    display: inline-block;
+
+}
+
+.social_window_header_3 h1{
+    font-size: 1.25em;
+    color: #000000;
+    margin: 0;
+}
+
+.gif_3{
+    align-self: center;
+    position: relative;
+    top: 0px;
+    padding-top: 0;
+    width: 2em;
+    height: 2em;
+}
+
+.close_button{
+    padding: 2px 5px ; 
+
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    float: right;
+    color : #fff;
+    background-color: #000000;
+    border: 0.5px solid #fff;
+    border-top: 2.5px solid #fff;
+    margin: 5px;
+
+}
+.toggle_button_3{
+    padding: 2px 5px ; 
+
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    float: right;
+    color : #fff;
+    background-color: #000000;
+    border: 0.5px solid #fff;
+    border-top: 2.5px solid #fff;
+    margin: 5px;
+
+}
+
+/* Hide the checkbox visually */
+.checkbox3 {
+    display: none;
+}
+
+/* Style the menu content */
+.social_window_content_3 {
+    visibility: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+
+.checkbox3:checked ~ .social_window_content_3 {
+    visibility: visible;
+    max-height: 10000px; 
     transition: max-height 0.5s ease-in;
     
 }

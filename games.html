@@ -54,5 +54,38 @@
             <img src="./Graphics/404/aguibihen-sigma-wolf.gif" alt="">
             <p>hola</p>
         </div>
+    </div>
+
+    <!-- Social Window 3 -->
+
+    <div class="social_window_3">
+        <input type="checkbox" id="checkbox3" class="checkbox3">
+        <div class="social_window_header_3">
+            <h1>why 2077 is<br>THE best RPG</h1>
+            <img src="./Graphics/games/2077/GIFS ANIMADOS DE PERSONAS.gif" alt="" class="gif_3">
+            
+            
+            
+            <!-- Close button -->
+            <a class="close_button" href="./index.html">X</a>
+            
+            <!-- Toggle button -->
+            <label for="checkbox3" class="toggle_button_3">-</label>   
+        </div>
+        
+        <div class="social_window_content_3">
+            <div id="content" class="content">
+                <script>
+                    fetch('./articles/articletest.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('content').innerHTML = html;
+                        })
+                            
+                </script>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
