@@ -5,6 +5,10 @@ body, h1, h2, p, a, div, footer {
     box-sizing: border-box;
 }
 
+body{
+    background-color: #000000;
+}
+
 p{
     font-size: 1.25em;
     color: #fff;
