@@ -57,6 +57,18 @@ body {
     justify-content: center;
 }
 
+.header {
+    display: flex;
+    justify-self: center
+}
+.header_img{
+    padding: 0;
+    height: 50px;
+    width: 50px;
+}
+.header_img:nth-child(3) {
+    image-orientation: flip-vertical;
+}
 .image_wrapper {
     justify-self: center;
     display: flex;
@@ -100,7 +112,14 @@ body {
 
 .transition{
     height: 300px;
-    background:url('./Booksite/dithered-image\ \(3\).png') repeat;
+    background:url('./Booksite/transition.png') repeat;
+}
+
+.transition2{
+    height: 300px;
+    background:url('./Booksite/transition.png') repeat;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 
 
@@ -110,4 +129,67 @@ body {
 .book2 {
     background-color: #fff;
     padding-bottom: 30px;
+}
+
+.header_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.grid_img{
+    height: 60px;
+    width: 60px;
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: center center;
+    display: block;
+  }
+  
+  .slow {
+    animation-duration: 10s;
+  }
+  
+  .fast {
+    animation-duration: 5s;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+.bookshelve {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+    padding: 5%;
+    margin: 0 auto;
+    width: 80%;
+    max-height: 10000px;
+    border: 2px solid #ffffff;
+}
+
+.link_img{
+    height: 66px;
+    width: 50px;
+    margin: 0 auto;
+
+}
+
+.link_text{
+    font-family: "Bytesized", sans-serif;
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.black_text{
+    color: #000;
 }
