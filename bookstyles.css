@@ -141,6 +141,7 @@ body {
 }
 
 .grid_img{
+    image-rendering: pixelated;
     height: 60px;
     width: 60px;
     animation-name: spin;
@@ -151,11 +152,11 @@ body {
   }
   
   .slow {
-    animation-duration: 10s;
+    animation-duration: 12s;
   }
   
   .fast {
-    animation-duration: 5s;
+    animation-duration: 8s
   }
   
   @keyframes spin {
@@ -178,9 +179,13 @@ body {
     height: 66px;
     width: 50px;
     margin: 0 auto;
+    transition: ease-in-out 0.1s;
 
 }
-
+.link_img:hover{
+    transform: translateY(-10px);
+    transition: ease-in-out 0.1s;
+}
 .link_text{
     font-family: "Bytesized", sans-serif;
     font-size: 1em;
