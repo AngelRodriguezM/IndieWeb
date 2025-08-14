@@ -142,3 +142,24 @@ hr{
     border: 2px solid #fff;
     border-radius: 100%;
 }
+
+.matrix{ position: relative; }            /* no mix-blend-mode here */
+
+.matrix::after{
+
+  content: "";
+  z-index: 9999;
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image: url('./Booksite/bayer.png');
+  background-repeat: repeat;
+  background-size: 8px 8px;
+  mix-blend-mode: soft-light;
+  image-rendering: pixelated;
+  backdrop-filter:contrast(7777%);
+}
+
+.gif_2 {
+    image-rendering: pixelated;
+    filter: contrast(1.75);
+}
