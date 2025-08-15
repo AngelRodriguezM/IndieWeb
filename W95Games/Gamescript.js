@@ -8,48 +8,56 @@ window.addEventListener("keydown", function(e) {
     }
 }, false);
 
-function myFunction() {
-    console.log("Hello World");
 
-    const box= document.getElementById("box-content");
-
-    const newline = document.createElement("p");
-    newline.textContent = "Hello World";
-
-
-    box.appendChild(newline);
+//window general logic instead of ID and tetris bound logic; I didnt know i would eventually scale this project
 
 
 
-}
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.newApp')) {
+    const wrap = e.target.closest('.newApp-wrap');
+    wrap.querySelector('.appWindow').classList.remove('closed');
+    console.log('open')
+  }
+  if (e.target.closest('.closeAppBtn')) {
+    const wrap = e.target.closest('.newApp-wrap');
+    wrap.querySelector('.appWindow').classList.add('closed');
+    console.log('closed')
+  }
+});
 
-function clearbox() {
-    const box =  document.getElementById("box-content");
-    const paragraph = box.querySelectorAll("p");
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.newApp-wrap').forEach(wrap => {
     
-    paragraph.forEach( p => p.remove());
-    
-    console.log("Cleared!")
-    
-}
+    const win     = wrap.querySelector('.appWindow');
+    const header  = win.querySelector('.window-header');
 
-function countTo10() {
-    const box = document.getElementById("box-content");
-    
-    for (let i = 0; i <= 10; i++) {
-        
-        const newline = document.createElement("p");
-        newline.textContent = `${i}`
-        for (let j = 0; j <= 100; j++){    
-        }
-        
-        box.appendChild(newline);
-        
-        
-    }
-    
-    console.log("counted successfully!")
-}
+    // drag
+    let dragging = false, offsetX = 0, offsetY = 0;
+    win.addEventListener('dragstart', e => e.preventDefault());
+    header.addEventListener('mousedown', (e) => {
+      const r = win.getBoundingClientRect();
+      win.style.left = r.left + 'px';
+      win.style.top  = r.top  + 'px';
+      win.style.transform = 'none';
+      offsetX = e.clientX - r.left;
+      offsetY = e.clientY - r.top;
+      dragging = true;
+      win.classList.add('dragging');
+      e.preventDefault();
+    });
+    document.addEventListener('mousemove', (e) => {
+      if (!dragging) return;
+      win.style.left = (e.clientX - offsetX) + 'px';
+      win.style.top  = (e.clientY - offsetY) + 'px';
+    });
+    document.addEventListener('mouseup', () => {
+      if (!dragging) return;
+      dragging = false;
+      win.classList.remove('dragging');
+    });
+  });
+});
 
 
 

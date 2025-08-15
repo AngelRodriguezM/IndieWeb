@@ -13,7 +13,8 @@
  
 
     <div class="tetris-game">
-        <div id="openTetrisApp" ><img src="./icons/TetrisAppIcon.png" alt="">
+        <div id="openTetrisApp" >
+            <img src="./icons/TetrisAppIcon.png" alt="">
             <p>Tetris</p>
         </div>
         <div class="gamewindow" id="gamewindow">
@@ -54,22 +55,22 @@
                 <div class="controls">
                     <button class="moveBtn" id="leftArrow" ><img src="./icons/arrowIcon.png" alt=""></button>
                     <button class="moveBtn" id="rightArrow" ><img src="./icons/arrowIcon.png" alt=""> </button>
-                    <button class="moveBtn" id="downArrow" > <img src="./icons/arrowIcon.png" alt=""></button>
                     <script src="Gamescript.js" defer></script>
+                    
+                    
+                    <div id="mini-grid" class="mini-grid"></div>
+                    <script>
+                        const miniGrid = document.getElementById('mini-grid');
+                        for (let i = 0; i<16; i++) {
+                            const cell = document.createElement('div');
+                            cell.classList.add('cell', 'tetroshape')
+                            miniGrid.appendChild(cell);
+                        }
+                        
+                        </script>
 
-
-                <div id="mini-grid" class="mini-grid"></div>
-                <script>
-                    const miniGrid = document.getElementById('mini-grid');
-                    for (let i = 0; i<16; i++) {
-                        const cell = document.createElement('div');
-                        cell.classList.add('cell', 'tetroshape')
-                        miniGrid.appendChild(cell);
-                    }
-
-                </script>
-
-                <button class="moveBtn" id="rotateBtn"><img src="./icons/RotateIcon.png" alt=""></button>
+                    <button class="moveBtn" id="downArrow" > <img src="./icons/arrowIcon.png" alt=""></button>
+                    <button class="moveBtn" id="rotateBtn"><img src="./icons/RotateIcon.png" alt=""></button>
 
                 </div>
 
@@ -79,6 +80,28 @@
 
 
     </div>
+
+    <div class="newApp-wrap">
+        <div class="newApp">
+            <img src="/Graphics/PeguinComputerGif.gif" alt="">
+            <p>Placeholder
+                App</p>
+        </div>
+        <div class="appWindow closed">
+            <div class="window-header">
+                <h1 class="game-title">Placeholder</h1>
+                <div class="title-buttons">
+                    <button class="titleBtn">_</button>
+                    <button class="titleBtn closeAppBtn" >X</button>
+                    <div class="pause-overlay" id="pauseOverlay">Paused — press Start</div>
+                </div>
+            </div>
+
+            <P>Content</P>
+
+        </div>
+    </div>
+
     <div class="taskbar-wrap">
         <div class="taskbar">
 
